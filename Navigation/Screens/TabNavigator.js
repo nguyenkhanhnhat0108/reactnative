@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { View, Text } from 'react-native'
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation'
 
 import AccountScreen from './TabScreens/AccountScreen'
@@ -31,11 +32,19 @@ const routeConfigs = {
   }
 };
 const tabNavigatorConfig = {
+  lazy: true,
   tabBarOptions: {
     activeTintColor: 'white',
     inactiveTintColor: 'white',
-    activeBackgroundColor: '#74b9ff',
+    activeBackgroundColor: '#fd79a8',
     inactiveBackgroundColor: '#0984e3',
+    showLabel: false,
+    safeAreInset: {
+      bottom: "never",
+      top: "never",
+    },
+    // tabStyle: { paddingBottom: 24 },
+    // style: { height: 80 }
   }
 };
 

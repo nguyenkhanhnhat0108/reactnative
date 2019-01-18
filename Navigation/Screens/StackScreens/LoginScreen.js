@@ -1,6 +1,18 @@
 import React, { Component } from 'react'
 import { Text, View, TextInput, Button, TouchableOpacity, Image, ActivityIndicator, FlatList } from 'react-native'
 import axios from 'axios';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+
+class HeaderTitle extends Component {
+    render() {
+        return (
+            <View style={{ flex: 1, flexDirection: "row" }}>
+                <Icon name="key" size={24}></Icon>
+                <Text>LOGIN</Text>
+            </View>
+        )
+    }
+}
 
 export default class LoginScreen extends Component {
     constructor(props) {
