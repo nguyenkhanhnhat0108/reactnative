@@ -3,6 +3,7 @@ import * as ActionTypes from '../Actions/Types';
 const defaultState = {
   loading: false,
   user: null,
+  
 };
 
 const authReducer = (state = defaultState, action) => {

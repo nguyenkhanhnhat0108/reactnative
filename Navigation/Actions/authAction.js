@@ -13,7 +13,7 @@ export const login = (email, password) => {
     return (dispatch) => {
         dispatch({
             type: ActionTypes.LOGIN,
-            payload: client.get('/users', { email, password })
+            payload: client.post('/users', { email, password })
         });
     };
 }
