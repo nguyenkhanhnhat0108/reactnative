@@ -31,6 +31,9 @@ exports.register = functions.https.onRequest((request, response) => {
         });
     });
 });
+// https:trigger kích để chạy
+//method:'POST,PUT':param=request.body
+//method:'GET,PUT,DELETE': param = requst.query.body
 exports.login = functions.https.onRequest((request, response) => {
     const { username, password } = request.body;
     var docs = [];
@@ -56,4 +59,9 @@ exports.login = functions.https.onRequest((request, response) => {
                 message: "Login fail"
             });
         });
+});
+
+//Firestore trigger
+exports.myFunctionName = functions.firestore.document('users/marie').onWrite((change, context) => {
+    // ... Your code here
 });
